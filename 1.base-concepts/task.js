@@ -1,17 +1,18 @@
+'use strict';
+
 function solveEquation(a, b, c) {
-    'use strict'; // Активируем строгий режим
-
-    // Вычисляем дискриминант
-    const d = b * b - 4 * a * c;
-
-    if (d > 0) {
-        // Два различных корня
-        return [(-b + Math.sqrt(d)) / (2 * a), (-b - Math.sqrt(d)) / (2 * a)];
-    } else if (d == 0) {
-        // Один корень
-        return [-b / (2 * a)];
-    } else {
-        // Нет корней
-        return [];
-    }
+  let arr = [];
+  let d = b ** 2 - 4 * a * c;
+  if (d < 0) {
+    return arr;
+  } else if (d === 0) {
+    let x = -b / (2 * a);
+    arr.push(x);
+    return arr;
+  } else {
+    let x1 = (-b + Math.sqrt(d)) / (2 * a);
+    let x2 = (-b - Math.sqrt(d)) / (2 * a);
+    arr.push(x1, x2);
+    return arr;
+  }
 }
