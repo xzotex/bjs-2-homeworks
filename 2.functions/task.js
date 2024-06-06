@@ -60,3 +60,19 @@ function averageEvenElementsWorker(...arr) {
   });
   return sumEven / countEven;
 }
+
+function makeWork(arrOfArr, func) {
+    let maxWorkerResult = -Infinity;
+
+    // Перебор всех элементов массива arrOfArr
+    for (let i = 0; i < arrOfArr.length; i++) {
+        const currentData = arrOfArr[i];
+        
+        const result = func(...currentData);
+        
+        if (result > maxWorkerResult) {
+            maxWorkerResult = result;
+        }
+    }
+    
+    return maxWorkerResult;
