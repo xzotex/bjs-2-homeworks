@@ -22,14 +22,14 @@ function summElementsWorker(...arr) {
 }
 
 function differenceMaxMinWorker(...arr) {
-    if (!arr.length) return 0; // Проверка наличия элементов
+    if (!arr.length) return 0;
     const max = Math.max(...arr);
     const min = Math.min(...arr);
     return max - min;
 }
 
 function differenceEvenOddWorker(...arr) {
-     if (!arr.length) return 0; // Проверка наличия элементов
+     if (!arr.length) return 0;
   let sumEven = 0;
   let sumOdd = 0;
   arr.forEach(arr => {
@@ -43,7 +43,7 @@ function differenceEvenOddWorker(...arr) {
 }
 
 function averageEvenElementsWorker(...arr) {
-    if (!arr.length) return 0; // Проверка наличия элементов
+    if (!arr.length) return 0;
   let sumEven = 0;
   let countEven = 0;
   arr.forEach(element => {
@@ -58,7 +58,6 @@ function averageEvenElementsWorker(...arr) {
 function makeWork(arrOfArr, func) {
     let maxWorkerResult = -Infinity;
 
-    // Перебор всех элементов массива arrOfArr
     for (let i = 0; i < arrOfArr.length; i++) {
         const currentData = arrOfArr[i];
         
@@ -70,3 +69,4 @@ function makeWork(arrOfArr, func) {
     }
     
     return maxWorkerResult;
+}
